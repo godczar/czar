@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlashScreener Token Page</title>
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">FLASHSCREENER</div>
+
+      <div class="search-wrapper">
+        <div class="search-input">
+          <span class="search-icon"></span>
+          <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- AUTOCOMPLETE -->
+        <div class="search-results" id="search-results"></div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="top-icon-circle"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="layout">
+    <!-- LEFT -->
+    <section class="left-column">
+
+      <!-- PAIR HEADER -->
+      <div class="pair-header">
+        <div class="pair-name-line">
+          <span class="pair-dot"></span>
+          <span class="pair-title-main">TOKEN/SOL</span>
+          <span class="pair-sub">loading...</span>
+        </div>
+        <div class="pair-volume-label">Volume</div>
+      </div>
+
+      <!-- CHART -->
+      <div class="chart-area">
+        <div class="chart-toolbar">
+          <div class="toolbar-btn"></div><div class="toolbar-btn"></div>
+          <div class="toolbar-btn"></div><div class="toolbar-btn"></div>
+          <div class="toolbar-btn"></div><div class="toolbar-btn"></div>
+          <div class="toolbar-btn"></div><div class="toolbar-btn"></div>
+          <div class="toolbar-btn"></div>
+        </div>
+
+        <!-- Container do chart da Lightweight Charts -->
+        <div class="chart-canvas" id="tv-chart"></div>
+      </div>
+
+      <!-- TRANSACTIONS -->
+      <section class="transactions">
+        <div class="transactions-title">Transactions</div>
+
+        <div class="transactions-header-row">
+          <span>time</span>
+          <span>wallet</span>
+          <span>sol</span>
+          <span>usd</span>
+          <span>coins</span>
+          <span>txn</span>
+        </div>
+
+        <div class="transactions-rows"></div>
+      </section>
+    </section>
+
+    <!-- RIGHT PANEL -->
+    <aside class="right-column">
+      <div class="token-panel">
+
+        <div class="token-header">
+          <div class="pfp-circle"></div>
+
+          <div class="ticker-title">
+            <span class="ticker-main">$TICKER</span>
+            <span class="badge-verified">✔</span>
+          </div>
+
+          <button class="menu-button">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <div class="token-name-block">
+          <div class="token-name">Loading...</div>
+          <div class="token-tags">
+            <span>Solana</span>
+            <span>Raydium</span>
+            <span>pump.fun</span>
+          </div>
+        </div>
+
+        <div class="banner-box">BANNER 3:1</div>
+
+        <div class="tab-row">
+          <button class="tab-btn active">X/Twitter</button>
+          <button class="tab-btn">Website</button>
+          <button class="tab-btn">Telegram</button>
+        </div>
+
+        <div class="metrics-row">
+          <div class="metric-box">
+            <div class="metric-label">LIQUIDITY</div>
+            <div class="metric-value">$0</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">MKT CAP</div>
+            <div class="metric-value">$0</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">FDV</div>
+            <div class="metric-value">$0</div>
+          </div>
+        </div>
+
+        <div class="price-row">
+          <div class="price-box">
+            <div class="metric-label">Price USD</div>
+            <div class="price-value">$0</div>
+          </div>
+          <div class="price-box">
+            <div class="metric-label">Price SOL</div>
+            <div class="price-value">0 SOL</div>
+          </div>
+        </div>
+
+        <div class="perf-row">
+          <div class="perf-changes">
+            <div class="perf-box perf-red">
+              <div class="perf-label">5m</div>
+              <div class="perf-value">0%</div>
+            </div>
+            <div class="perf-box perf-green">
+              <div class="perf-label">1h</div>
+              <div class="perf-value">0%</div>
+            </div>
+            <div class="perf-box perf-green">
+              <div class="perf-label">6h</div>
+              <div class="perf-value">0%</div>
+            </div>
+            <div class="perf-box perf-green">
+              <div class="perf-label">24h</div>
+              <div class="perf-value">0%</div>
+            </div>
+          </div>
+
+          <div class="volume-block">
+            <div class="metric-label">VOLUME</div>
+            <div class="volume-value">$0</div>
+            <div class="volume-bar">
+              <div class="volume-sells"></div>
+              <div class="volume-buys"></div>
+            </div>
+            <div class="volume-legend">
+              <span>Sells 0</span>
+              <span>Buys 0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <div class="details-title">DETAILS</div>
+
+          <div class="details-row">
+            <span class="details-label">CA:</span>
+            <a href="#" class="details-link">---</a>
+          </div>
+
+          <div class="details-row">
+            <span class="details-label">Created:</span>
+            <span class="details-text">---</span>
+          </div>
+
+          <div class="details-row">
+            <span class="details-label">Deployer:</span>
+            <a href="#" class="details-link">---</a>
+          </div>
+
+          <div class="details-row">
+            <span class="details-label">Pair:</span>
+            <a href="#" class="details-link">---</a>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Biblioteca de gráfico da TradingView (Lightweight Charts) -->
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+
+  <!-- Script principal (deve conter a lógica do chart usando o container #tv-chart) -->
+  <script src="gecko.js?v=4"></script>
+</body>
+</html>
